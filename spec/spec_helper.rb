@@ -3,7 +3,7 @@ require 'capybara'
 require 'simplecov'
 require 'simplecov-console'
 require 'rspec'
-require 'rps'
+require './lib/game'
 require 'features/web_helpers'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')

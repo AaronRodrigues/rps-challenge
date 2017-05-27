@@ -1,5 +1,5 @@
 require 'sinatra/base'
-# require 'rps'
+require 'game'
 
 class Rps < Sinatra::Base
   enable :sessions
