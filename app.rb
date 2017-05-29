@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require 'game'
+require './lib/game'
 
 class Rps < Sinatra::Base
   enable :sessions
@@ -19,8 +19,9 @@ class Rps < Sinatra::Base
     redirect '/play'
   end
 
-  get '/result' do
-    erb :result
+  get '/result' do   
+    $game = Game.new
+     erb :result
   end
 
   # start the server if ruby file executed directly
