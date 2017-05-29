@@ -10,7 +10,7 @@ feature 'Choose weapon' do
      expect(page).to have_content 'Scissors'
  	end
 end
-
+#User Story 5, Game chooses random option
 feature 'Player chooses Rock' do
   scenario 'computer chooses rock' do 
     srand(ROCK_SEED)
@@ -18,4 +18,14 @@ feature 'Player chooses Rock' do
     click_button 'Rock'
     expect(page).to have_content 'Rock'
   end
+end
+
+#User story 6
+#A winner is declared
+feature 'Player wins' do
+scenario 'Player wins' do
+  sign_in_and_play
+  click_button 'Rock'
+  expect(page).to have_content 'You win'
+end
 end
