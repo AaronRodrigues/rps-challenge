@@ -21,6 +21,10 @@ describe Game do
   end
 
   describe '#opponent_weapon' do
+    it 'returns a random weapon' do
+      expect(['Rock', 'Paper', 'Scissors']).to include game.result
+    end
+    
     it 'returns oppponent weapon' do
       expect(game.opponent_weapon).to eq 'Rock'
     end

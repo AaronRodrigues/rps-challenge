@@ -1,4 +1,4 @@
  <%#= return 'TIE' if $game.result == 'Rock' %>
  <%#= return 'LOSE' if $game.result == 'Paper' %>
  <%#= return 'WIN' if $game.result == 'Scissors' %>
- <%= $game.result == 'Rock' ? 'TIE!' : $game.result == 'Paper' ?  'LOSE' :  'WIN' %>
+ <%= @game.result == 'Rock' ? 'TIE!' : @game.result == 'Paper' ?  'LOSE' :  'WIN' %>

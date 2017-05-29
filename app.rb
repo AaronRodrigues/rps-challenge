@@ -15,18 +15,18 @@ class Rps < Sinatra::Base
   end
 
   get '/play' do
-    @game = Game.new(session)
+   @game = Game.new(session)
     erb :play
   end
 
   post '/play' do
     session[:weapon] = params[:weapon]
-    session[:opponent_weapon] = :rock
+    session[:opponent_weapon] = Player.new.result
     redirect '/play'
   end
 
   get '/result' do
-    $game = Game.new
+    # $game = Game.new
     erb :result
   end
 

@@ -1,7 +1,9 @@
 class Player
-  attr_reader :name
+  attr_reader  :result
 
-  def initialize(name)
-    @name = name
+
+  def result
+    ['Rock', 'Paper', 'Scissors'].sample
   end
+
 end
